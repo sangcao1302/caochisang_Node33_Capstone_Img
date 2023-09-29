@@ -1,0 +1,516 @@
+{
+	"info": {
+		"_postman_id": "286e5815-af53-47b8-a618-16e88a1b79e7",
+		"name": "Cao Chi Sang_Node33_Capstone_Img",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21820401"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/auth/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "caochisang1302@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "mat_khau",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "ho_ten",
+							"value": "Sang Cao",
+							"type": "text"
+						},
+						{
+							"key": "tuoi",
+							"value": "26",
+							"type": "text"
+						},
+						{
+							"key": "anh_dai_dien",
+							"type": "file",
+							"src": "/C:/Users/caoch/OneDrive/Máy tính/Rose.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sangcao1302@gmail.com\",\r\n    \"mat_khau\":\"Sang.5122\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/image/hinhanh",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjE1LCJlbWFpbCI6InNhbmdjYW8xMzAyQGdtYWlsLmNvbSIsIm1hdF9raGF1IjoiU2FuZy41MTIyIiwiaG9fdGVuIjoiU2FuZyBDYW8iLCJ0dW9pIjoyNiwiYW5oX2RhaV9kaWVuIjoibG9jYWxob3N0OjgwODAvcHVibGljL2ltZy8xNjk1MzA2OTIzNzgwX1Jvc2UuanBnIn0sImlhdCI6MTY5NTk2Nzc2MSwiZXhwIjoxNjk1OTc0OTYxfQ.eox7vmLcPgh939Z9_6seghrqcih9OYbED1MapXNRaz8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/image/hinhanh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"image",
+						"hinhanh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/image/hinhanh?search=duong pho",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjE1LCJlbWFpbCI6InNhbmdjYW8xMzAyQGdtYWlsLmNvbSIsIm1hdF9raGF1IjoiU2FuZy41MTIyIiwiaG9fdGVuIjoiU2FuZyBDYW8iLCJ0dW9pIjoyNiwiYW5oX2RhaV9kaWVuIjoibG9jYWxob3N0OjgwODAvcHVibGljL2ltZy8xNjk1MzA2OTIzNzgwX1Jvc2UuanBnIn0sImlhdCI6MTY5NTk2Nzc2MSwiZXhwIjoxNjk1OTc0OTYxfQ.eox7vmLcPgh939Z9_6seghrqcih9OYbED1MapXNRaz8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/image/hinhanh?search=duong pho",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"image",
+						"hinhanh"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "duong pho"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/image/info/hinhanh/user/12",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjE1LCJlbWFpbCI6InNhbmdjYW8xMzAyQGdtYWlsLmNvbSIsIm1hdF9raGF1IjoiU2FuZy41MTIyIiwiaG9fdGVuIjoiU2FuZyBDYW8iLCJ0dW9pIjoyNiwiYW5oX2RhaV9kaWVuIjoibG9jYWxob3N0OjgwODAvcHVibGljL2ltZy8xNjk1MzA2OTIzNzgwX1Jvc2UuanBnIn0sImlhdCI6MTY5NTk2Nzc2MSwiZXhwIjoxNjk1OTc0OTYxfQ.eox7vmLcPgh939Z9_6seghrqcih9OYbED1MapXNRaz8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/image/info/hinhanh/user/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"image",
+						"info",
+						"hinhanh",
+						"user",
+						"12"
+					],
+					"query": [
+						{
+							"key": "hinhId",
+							"value": "12",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/comment/binhluan/12",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjE1LCJlbWFpbCI6InNhbmdjYW8xMzAyQGdtYWlsLmNvbSIsIm1hdF9raGF1IjoiU2FuZy41MTIyIiwiaG9fdGVuIjoiU2FuZyBDYW8iLCJ0dW9pIjoyNiwiYW5oX2RhaV9kaWVuIjoibG9jYWxob3N0OjgwODAvcHVibGljL2ltZy8xNjk1MzA2OTIzNzgwX1Jvc2UuanBnIn0sImlhdCI6MTY5NTk2Nzc2MSwiZXhwIjoxNjk1OTc0OTYxfQ.eox7vmLcPgh939Z9_6seghrqcih9OYbED1MapXNRaz8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/comment/binhluan/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment",
+						"binhluan",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/comment/binhluan/16",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjE1LCJlbWFpbCI6InNhbmdjYW8xMzAyQGdtYWlsLmNvbSIsIm1hdF9raGF1IjoiU2FuZy41MTIyIiwiaG9fdGVuIjoiU2FuZyBDYW8iLCJ0dW9pIjoyNiwiYW5oX2RhaV9kaWVuIjoibG9jYWxob3N0OjgwODAvcHVibGljL2ltZy8xNjk1MzA2OTIzNzgwX1Jvc2UuanBnIn0sImlhdCI6MTY5NTk2Nzc2MSwiZXhwIjoxNjk1OTc0OTYxfQ.eox7vmLcPgh939Z9_6seghrqcih9OYbED1MapXNRaz8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n  \"nguoi_dung_id\": 16,\r\n  \"hinh_id\": 21,\r\n  \"ngay_binh_luan\": \"2023-09-29T06:36:07.593Z\",\r\n  \"noi_dung\": \"beautiful\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/comment/binhluan/16",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment",
+						"binhluan",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/profile/16",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjE1LCJlbWFpbCI6InNhbmdjYW8xMzAyQGdtYWlsLmNvbSIsIm1hdF9raGF1IjoiU2FuZy41MTIyIiwiaG9fdGVuIjoiU2FuZyBDYW8iLCJ0dW9pIjoyNiwiYW5oX2RhaV9kaWVuIjoibG9jYWxob3N0OjgwODAvcHVibGljL2ltZy8xNjk1MzA2OTIzNzgwX1Jvc2UuanBnIn0sImlhdCI6MTY5NTk2Nzc2MSwiZXhwIjoxNjk1OTc0OTYxfQ.eox7vmLcPgh939Z9_6seghrqcih9OYbED1MapXNRaz8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/profile/16",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"profile",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/saveImg/15",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjE1LCJlbWFpbCI6InNhbmdjYW8xMzAyQGdtYWlsLmNvbSIsIm1hdF9raGF1IjoiU2FuZy41MTIyIiwiaG9fdGVuIjoiU2FuZyBDYW8iLCJ0dW9pIjoyNiwiYW5oX2RhaV9kaWVuIjoibG9jYWxob3N0OjgwODAvcHVibGljL2ltZy8xNjk1MzA2OTIzNzgwX1Jvc2UuanBnIn0sImlhdCI6MTY5NTk2Nzc2MSwiZXhwIjoxNjk1OTc0OTYxfQ.eox7vmLcPgh939Z9_6seghrqcih9OYbED1MapXNRaz8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/saveImg/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"saveImg",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/postImg/16",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjE1LCJlbWFpbCI6InNhbmdjYW8xMzAyQGdtYWlsLmNvbSIsIm1hdF9raGF1IjoiU2FuZy41MTIyIiwiaG9fdGVuIjoiU2FuZyBDYW8iLCJ0dW9pIjoyNiwiYW5oX2RhaV9kaWVuIjoibG9jYWxob3N0OjgwODAvcHVibGljL2ltZy8xNjk1MzA2OTIzNzgwX1Jvc2UuanBnIn0sImlhdCI6MTY5NTk2Nzc2MSwiZXhwIjoxNjk1OTc0OTYxfQ.eox7vmLcPgh939Z9_6seghrqcih9OYbED1MapXNRaz8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ten_hinh",
+							"value": "Minh Họa",
+							"type": "text"
+						},
+						{
+							"key": "duong_dan",
+							"type": "file",
+							"src": "/C:/Users/caoch/OneDrive/Máy tính/1688465738-grasp-the-rainy-season-travel-tips-to-da-lat.jpg"
+						},
+						{
+							"key": "mo_ta",
+							"value": "Đà Lạt",
+							"type": "text"
+						},
+						{
+							"key": "nguoi_dung_id",
+							"value": "16",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/postImg/16",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"postImg",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/update/infoUser/16",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjE1LCJlbWFpbCI6InNhbmdjYW8xMzAyQGdtYWlsLmNvbSIsIm1hdF9raGF1IjoiU2FuZy41MTIyIiwiaG9fdGVuIjoiU2FuZyBDYW8iLCJ0dW9pIjoyNiwiYW5oX2RhaV9kaWVuIjoibG9jYWxob3N0OjgwODAvcHVibGljL2ltZy8xNjk1MzA2OTIzNzgwX1Jvc2UuanBnIn0sImlhdCI6MTY5NTk2Nzc2MSwiZXhwIjoxNjk1OTc0OTYxfQ.eox7vmLcPgh939Z9_6seghrqcih9OYbED1MapXNRaz8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nguoi_dung_id",
+							"value": "16",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "caochisang1302@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "mat_khau",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "ho_ten",
+							"value": "Cao Sang",
+							"type": "text"
+						},
+						{
+							"key": "tuoi",
+							"value": "26",
+							"type": "text"
+						},
+						{
+							"key": "anh_dai_dien",
+							"type": "file",
+							"src": "/C:/Users/caoch/OneDrive/Máy tính/1688465738-grasp-the-rainy-season-travel-tips-to-da-lat.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/update/infoUser/16",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"update",
+						"infoUser",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/createImg/16",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjE1LCJlbWFpbCI6InNhbmdjYW8xMzAyQGdtYWlsLmNvbSIsIm1hdF9raGF1IjoiU2FuZy41MTIyIiwiaG9fdGVuIjoiU2FuZyBDYW8iLCJ0dW9pIjoyNiwiYW5oX2RhaV9kaWVuIjoibG9jYWxob3N0OjgwODAvcHVibGljL2ltZy8xNjk1MzA2OTIzNzgwX1Jvc2UuanBnIn0sImlhdCI6MTY5NTk2Nzc2MSwiZXhwIjoxNjk1OTc0OTYxfQ.eox7vmLcPgh939Z9_6seghrqcih9OYbED1MapXNRaz8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/createImg/16",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"createImg",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/deleteImg/16",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjE1LCJlbWFpbCI6InNhbmdjYW8xMzAyQGdtYWlsLmNvbSIsIm1hdF9raGF1IjoiU2FuZy41MTIyIiwiaG9fdGVuIjoiU2FuZyBDYW8iLCJ0dW9pIjoyNiwiYW5oX2RhaV9kaWVuIjoibG9jYWxob3N0OjgwODAvcHVibGljL2ltZy8xNjk1MzA2OTIzNzgwX1Jvc2UuanBnIn0sImlhdCI6MTY5NTk2Nzc2MSwiZXhwIjoxNjk1OTc0OTYxfQ.eox7vmLcPgh939Z9_6seghrqcih9OYbED1MapXNRaz8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/deleteImg/16",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"deleteImg",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/save/img/21",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjE1LCJlbWFpbCI6InNhbmdjYW8xMzAyQGdtYWlsLmNvbSIsIm1hdF9raGF1IjoiU2FuZy41MTIyIiwiaG9fdGVuIjoiU2FuZyBDYW8iLCJ0dW9pIjoyNiwiYW5oX2RhaV9kaWVuIjoibG9jYWxob3N0OjgwODAvcHVibGljL2ltZy8xNjk1MzA2OTIzNzgwX1Jvc2UuanBnIn0sImlhdCI6MTY5NTk3MTQzNSwiZXhwIjoxNjk1OTc4NjM1fQ.x-emgEgD6LsW8kQEBaDk2G0nODQPXkWvAqZjv8j_Vro",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/save/img/21",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"save",
+						"img",
+						"21"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
